@@ -4,16 +4,19 @@
 <h5>Let's say the user wants to transmit a message M(x) = 1001100. He has to select a polynomial generator. In our case we select G(x) = x^3 + x^2 + 1. The degree of the polynomial is 3, so we append 3 parity bits at the end of our message. Now M(x) = 1001100 000. The binary representation of the polynomial is 1101.</h5>
 <h1>CRC</h1>
 <pre><h5>
-1001100000
-1101
- 1001
- 1101
-  1010
-  1101
-   1110
-   1101
-     1100
-     1101
-      001  
-</h5></pre>
+Message Transmitter                                                Message Receiver
+1001100000                                                         1001100001
+1101                                                               1101
+ 1001                                                               1001
+ 1101                                                               1101
+  1010                                                               1000
+  1101                                                               1101
+   1110                                                               1010
+   1101                                                               1101
+     1100                                                              1110
+     1101                                                              1101
+      001                                                                1101 
+                                                                         1101
+                                                                         0000
+</h5></pre>                                                                
 <h5>  100011</h5>
