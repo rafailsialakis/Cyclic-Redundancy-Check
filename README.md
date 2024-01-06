@@ -3,5 +3,6 @@
 <h2>How the program works:</h2>
 <h5>Let's say the user wants to transmit a message M(x) = 1001100. He has to select a polynomial generator. In our case we select G(x) = x^3 + x^2 + 1. The degree of the polynomial is 3, so we append 3 parity bits at the end of our message. Now M(x) = 1001100 000</h5>
 <h1>CRC</h1>
-<h5>100011010010</h5>
+<pre><h5>rara    arra
+rarar </h5></pre>
 <h5>  100011</h5>
