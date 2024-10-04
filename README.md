@@ -1,5 +1,15 @@
 CRC (Cyclic Redundancy Check) Program in Python
-
+Table of Contents
+Introduction
+Features
+CRC Algorithm
+Requirements
+Installation
+Usage
+Example
+Customization
+License
+Introduction
 This is a Python implementation of the Cyclic Redundancy Check (CRC) algorithm. CRC is commonly used for error-checking in digital networks and storage devices to detect accidental changes to raw data.
 
 This program computes the CRC checksum for a given input message using a specified CRC polynomial and returns both the checksum and the transmitted message (message with appended checksum).
@@ -7,12 +17,14 @@ This program computes the CRC checksum for a given input message using a specifi
 Features
 Supports any CRC polynomial: You can specify the polynomial used for the CRC computation.
 Message validation: Verify whether the received message has been transmitted without error.
-Customizable CRC width: Adjust the width of the CRC (e.g., 8-bit, 16-bit, 32-bit).
+Customizable CRC computation: Adjust the parameters as needed for your use case.
 CRC Algorithm
 The CRC algorithm takes a binary message and performs division using binary arithmetic with a predetermined generator polynomial. The remainder of this division is the CRC code, which is appended to the original message.
 
-CRC Formula
+CRC Formula:
 
+scss
+Copy code
 R(x) = M(x) * x^k % G(x)
 Where:
 
@@ -30,7 +42,7 @@ Clone the repository or download the crc.py file directly:
 
 bash
 Copy code
-git clone https://github.com/rafailsialakis/Cyclic-Redundancy-Check
+git clone https://github.com/your-username/crc-python.git
 cd crc-python
 Ensure you have Python 3 installed by running:
 
@@ -58,3 +70,32 @@ bash
 Copy code
 Enter the message (binary): 1101011011
 Enter the CRC polynomial (binary): 10011
+Output:
+
+yaml
+Copy code
+Original Message: 1101011011
+CRC Polynomial: 10011
+CRC Checksum: 1100
+Transmitted Message: 11010110111100
+Example
+Here’s a quick example using the crc.py module:
+
+python
+Copy code
+from crc import compute_crc
+
+message = "1101011011"
+polynomial = "10011"
+
+# Compute the CRC checksum
+checksum, transmitted_message = compute_crc(message, polynomial)
+
+print(f"Message: {message}")
+print(f"CRC Checksum: {checksum}")
+print(f"Transmitted Message: {transmitted_message}")
+Customization
+You can modify the CRC polynomial, adapt the algorithm, or customize it for various CRC standards by altering the polynomial used in the division process.
+
+License
+This project is licensed under the MIT License. Feel free to use and modify it as needed.
