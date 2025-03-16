@@ -1,7 +1,7 @@
-# CRC.py
+# Cyclic Redundancy Check
 
 ## Overview
-`crc.py` is a Python script for calculating Cyclic Redundancy Check (CRC) checksums. CRC is widely used in data transmission and storage for error-checking purposes. This script allows users to compute CRC values for given input data using configurable polynomial and initial values.
+Implementation of CRC in **python**. CRC is widely used in data transmission and storage for error-checking purposes. This script allows users to compute CRC values for given input data using configurable polynomial and initial values.
 
 
 ## Installation
